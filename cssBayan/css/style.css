@@ -88,6 +88,10 @@
     opacity: 1;
 }
 
+.accordion:hover .accordion-title {
+    color: black;
+}
+
 .accordion-target {
     max-height: 0;
     overflow: hidden;
@@ -105,6 +109,14 @@
 
 .accordion-toggle:checked ~ .accordion-label .accordion-title {
     color: black;
+}
+
+.accordion-toggle:active ~ .accordion-label .accordion-title {
+    color: rgb(58, 119, 52);
+}
+
+.accordion-toggle:active ~ .accordion-label .img {
+    opacity: 0.7;
 }
 
 .accordion-toggle:hover ~ .accordion-label .accordion-target {
