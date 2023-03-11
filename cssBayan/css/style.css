@@ -62,7 +62,9 @@
 .accordion-title {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.6rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: rgb(58, 119, 52);
 }
 
 .img {
@@ -78,7 +80,7 @@
     width: 1rem;
     height: 1rem;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
     transform: rotate(45deg)
 }
 
@@ -89,10 +91,23 @@
 .accordion-target {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: 0.4s ease-out;
 }
 
 .accordion-toggle:checked ~ .accordion-label .accordion-target {
+    max-height: 100vh;
+    transition: max-height 0.5s ease-in;
+}
+
+.accordion-toggle:checked + .accordion-label .icon {
+    transform: rotate(0deg);
+}
+
+.accordion-toggle:checked ~ .accordion-label .accordion-title {
+    color: black;
+}
+
+.accordion-toggle:hover ~ .accordion-label .accordion-target {
     max-height: 100vh;
     transition: max-height 0.5s ease-in;
 }
