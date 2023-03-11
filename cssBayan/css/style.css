@@ -50,7 +50,9 @@
   }
 
 .accordion-item {
-    border-top: 0.1rem solid gray;
+    padding-top: 0.4rem;
+    border-top: 0.1rem solid rgb(198, 198, 198);
+    width: 40vw;
 }
 
 .accordion-label {
@@ -58,10 +60,39 @@
 }
 
 .accordion-title {
-    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
 }
 
 .img {
-    width: 25vw;
-    height: 25vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+    width: 30vw;
+    height: 30vw;
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    transform: rotate(45deg)
+}
+
+.accordion:hover .icon {
+    opacity: 1;
+}
+
+.accordion-target {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-toggle:checked ~ .accordion-label .accordion-target {
+    max-height: 100vh;
+    transition: max-height 0.5s ease-in;
 }
