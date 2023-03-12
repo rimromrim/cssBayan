@@ -29,9 +29,28 @@
     font-family: 'Raleway';
     font-style: italic;
     font-weight: 700;
-    font-size: 1.5rem;
     color: rgb(57, 57, 57);
 }
+
+@media (max-width: 767px) {
+    body {
+      font-size: 0.5rem; /* размер шрифта для мобильных устройств */
+    }
+  }
+  
+  /* Стили для планшетов */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    body {
+      font-size: 1rem; /* размер шрифта для планшетов */
+    }
+  }
+  
+  /* Стили для настольных компьютеров */
+  @media (min-width: 1200px) {
+    body {
+      font-size: 1.5rem; /* размер шрифта для настольных компьютеров */
+    }
+  }
 
 .title {
     font-size: 2rem;
@@ -84,14 +103,6 @@
     transform: rotate(45deg)
 }
 
-.accordion:hover .icon {
-    opacity: 1;
-}
-
-.accordion:hover .accordion-title {
-    color: black;
-}
-
 .accordion-target {
     max-height: 0;
     overflow: hidden;
@@ -119,7 +130,22 @@
     opacity: 0.7;
 }
 
-.accordion-toggle:hover ~ .accordion-label .accordion-target {
-    max-height: 100vh;
-    transition: max-height 0.5s ease-in;
+@media (hover: hover) {
+
+    .accordion:hover .icon {
+        opacity: 1;
+    }
+
+    .accordion:hover .accordion-title {
+        color: black;
+    }
+
+    .accordion-toggle:hover ~ .accordion-label .accordion-target {
+        max-height: 100vh;
+        transition: max-height 0.5s ease-in;
+    }
+
+    .accordion-label:hovergit .icon {
+    transform: rotate(0deg)
+    }
 }
