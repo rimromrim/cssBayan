@@ -32,28 +32,9 @@
     color: rgb(57, 57, 57);
 }
 
-@media (max-width: 767px) {
-    body {
-      font-size: 0.5rem; /* размер шрифта для мобильных устройств */
-    }
-  }
-  
-  /* Стили для планшетов */
-  @media (min-width: 768px) and (max-width: 1199px) {
-    body {
-      font-size: 1rem; /* размер шрифта для планшетов */
-    }
-  }
-  
-  /* Стили для настольных компьютеров */
-  @media (min-width: 1200px) {
-    body {
-      font-size: 1.5rem; /* размер шрифта для настольных компьютеров */
-    }
-  }
+
 
 .title {
-    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -66,7 +47,7 @@
 
 .accordion {
     list-style-type: none;
-  }
+}
 
 .accordion-item {
     padding-top: 0.4rem;
@@ -149,3 +130,40 @@
     transform: rotate(0deg)
     }
 }
+
+@media (max-width: 767px) {
+    body {
+      font-size: 0.8rem; /* размер шрифта для мобильных устройств */
+    }
+    .title {
+    font-size: 1rem;
+    }
+
+    .icon {
+        opacity: 1;
+    }
+  }
+  
+  /* Стили для планшетов */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    body {
+      font-size: 2rem; /* размер шрифта для планшетов */
+    }
+    .title {
+    font-size: 2.5rem;
+    }
+
+    .icon {
+        opacity: 1;
+    }
+  }
+  
+  /* Стили для настольных компьютеров */
+  @media (min-width: 1200px) {
+    body {
+      font-size: 1.5rem; /* размер шрифта для настольных компьютеров */
+    }
+    .title {
+    font-size: 2rem;
+    }
+  }
