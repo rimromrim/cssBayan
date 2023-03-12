@@ -145,7 +145,7 @@
         transition: max-height 0.5s ease-in;
     }
 
-    .accordion-label:hovergit .icon {
+    .accordion-label:hover .icon {
     transform: rotate(0deg)
     }
 }
